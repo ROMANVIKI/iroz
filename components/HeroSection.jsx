@@ -2,29 +2,39 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <section id="hero" className="h-screen w-full font-sans ">
-      <div className="container flex flex-col justify-center items-center">
-        <div className="text-3xl pt-20">
-          <h1 className="text-center bg-gradient-to-r from-blue-500 to-violet-500 bg-clip-text text-transparent">
+    <section
+      id="hero"
+      className="min-h-screen w-full bg-white dark:bg-gray-950 font-sans"
+    >
+      <div className="max-w-7xl mx-auto flex flex-col items-center justify-center text-center px-4 py-20 md:py-32">
+        {/* Title */}
+        <div className="space-y-4">
+          <h1 className="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-blue-500 to-violet-500 bg-clip-text text-transparent">
             Moving Forward Together
           </h1>
-          <h1 className="text-center text-gray-700">
+          <h2 className="text-lg md:text-2xl text-gray-700 dark:text-gray-300">
             Advisory Services for Entrepreneurs by{" "}
-            <span className="underline decoration-sky-500">Entrepreneurs</span>
-          </h1>
+            <span className="underline decoration-sky-500 underline-offset-4">
+              Entrepreneurs
+            </span>
+          </h2>
         </div>
-        <div className="pt-20">
-          <p className="text-center antialiased">
-            We are trusted partner in business success, offering strategy,
-            corporate and fiduciary services to drive your business forward.
-          </p>
-        </div>
-        <div className="pt-20">
+
+        {/* Subtext */}
+        <p className="text-sm md:text-lg text-gray-600 dark:text-gray-400 mt-8 max-w-2xl leading-relaxed">
+          We are your trusted partner in business success, offering strategy,
+          corporate and fiduciary services to drive your business forward.
+        </p>
+
+        {/* Image */}
+        <div className="mt-12">
           <Image
             src="/assets/images/career.svg"
             alt="career"
-            width={100}
-            height={100}
+            width={300}
+            height={300}
+            className="mx-auto"
+            priority
           />
         </div>
       </div>
