@@ -1,5 +1,4 @@
 import Image from "next/image";
-import CareerSvg from "../public/career.svg";
 
 const HeroSection = () => {
   return (
@@ -21,7 +20,12 @@ const HeroSection = () => {
           </p>
         </div>
         <div className="pt-20">
-          <Image src={CareerSvg} alt="career" width={100} height={100} />
+          <Image
+            src="/assets/images/career.svg"
+            alt="career"
+            width={100}
+            height={100}
+          />
         </div>
       </div>
     </section>
