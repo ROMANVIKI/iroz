@@ -1,4 +1,3 @@
-import CareerSVG from "../public/career.svg"; // Correct import
 import Image from "next/image";
 
 const HeroSection = () => {
