@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="pt-20 p-2">
+      <div className="pt-20 p-4">
         <HeroSection />
         <FeaturesSection />
         <Benefits />

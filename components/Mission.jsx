@@ -2,16 +2,15 @@ const Mission = () => {
   return (
     <section
       id="mission"
-      className="bg-white dark:bg-gray-950 py-16 px-6 text-center md:text-left"
+      className="pt-20 border-4 pb-20 border-solid border-t-indigo-400 border-b-transparent border-r-transparent border-l-transparent
+"
     >
-      <div className="max-w-4xl mx-auto">
-        <p className="text-indigo-600 font-semibold uppercase tracking-widest mb-2">
-          Our Mission
-        </p>
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+      <div className="flex flex-col space-y-4 justify-center text-center">
+        <p className="text-sm text-gray-500">Our Mission</p>
+        <h1 className="text-2xl text-bold">
           Sequency is more than just Advisory
         </h1>
-        <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+        <p>
           As entrepreneurs ourselves, we understand the challenges businesses
           face. Our goal isn’t just to provide solutions but to build true
           partnerships. With a commitment to integrity, excellence, and

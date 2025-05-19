@@ -48,7 +48,7 @@ const Navbar = () => {
 
       {/* Mobile Dropdown */}
       <div
-        className={`fixed top-16 right-4 h-screen bg-white/90 backdrop-blur-lg shadow-xl rounded-md px-6 py-4 transition-all duration-300 ease-in-out z-40 ${
+        className={`fixed w-1/2 top-16 right-0 h-screen bg-white/90 backdrop-blur-lg shadow-xl rounded-md px-6 py-4 transition-all duration-300 ease-in-out z-40 ${
           isNavOpen
             ? "opacity-100 scale-100"
             : "opacity-0 scale-95 pointer-events-none"
