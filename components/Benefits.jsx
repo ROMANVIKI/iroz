@@ -1,12 +1,36 @@
 "use client";
+
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Star } from "lucide-react";
+import { Briefcase, Settings, ShieldCheck, Handshake } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Benefits = () => {
+  const benefits = [
+    {
+      title: "Entrepreneurial Experience",
+      desc: "Benefit from our extensive experience in entrepreneurship. We know what it takes to be successful.",
+      icon: Briefcase,
+    },
+    {
+      title: "Bespoke Solutions",
+      desc: "We develop solutions designed to meet the specific needs of your business.",
+      icon: Settings,
+    },
+    {
+      title: "Swiss Core Values",
+      desc: "Our values are at the heart of everything we do, reflecting our commitment to quality and responsibility.",
+      icon: ShieldCheck,
+    },
+    {
+      title: "Long-Term Partnership",
+      desc: "We focus on building lasting relationships based on trust and collaboration.",
+      icon: Handshake,
+    },
+  ];
+
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -33,8 +57,7 @@ const Benefits = () => {
     <section
       ref={sectionRef}
       id="benefits"
-      className="font-sans border-t-4 rounded-lg w-full border-t-indigo-400 border-b-0 border-r-0 border-l-0 pb-10 pt-10
-         "
+      className="font-sans border-t-4 rounded-lg w-full border-t-indigo-400 pb-10 pt-10"
     >
       <div className="container mx-auto px-4 flex flex-col items-center text-center">
         <p className="font-semibold text-gray-500 text-sm mb-2">
@@ -43,32 +66,20 @@ const Benefits = () => {
         <h1 className="text-3xl font-bold pb-14">Your Benefits</h1>
 
         <div className="grid gap-8 max-sm:grid-cols-1 sm:grid-cols-2 max-w-5xl w-full">
-          {[
-            {
-              title: "Entrepreneurial Experience",
-              desc: "Benefit from our extensive experience in entrepreneurship. We know what it takes to be successful.",
-            },
-            {
-              title: "Bespoke Solutions",
-              desc: "We develop solutions designed to meet the specific needs of your business.",
-            },
-            {
-              title: "Swiss Core Values",
-              desc: "Our values are at the heart of everything we do, reflecting our commitment to quality and responsibility.",
-            },
-            {
-              title: "Long-Term Partnership",
-              desc: "We focus on building lasting relationships based on trust and collaboration.",
-            },
-          ].map(({ title, desc }, idx) => (
-            <div key={idx} className="benefit-item space-y-4 p-6  relative">
-              <Star
-                size={24}
-                color="#3b82f6" // Tailwind indigo-500 blue
-                className="absolute top-4 left-4"
-              />
-              <h2 className="text-2xl font-semibold pl-10">{title}</h2>
-              <p className="text-gray-600">{desc}</p>
+          {benefits.map(({ title, desc, icon: Icon }, idx) => (
+            <div
+              key={idx}
+              className="benefit-item flex items-center justify-center space-y-4 p-6 flex-col"
+            >
+              <div>
+                <Icon size={24} color="#3b82f6" />
+              </div>
+              <div>
+                <h2 className="text-2xl font-semibold ">{title}</h2>
+              </div>
+              <div>
+                <p className="text-gray-600">{desc}</p>
+              </div>
             </div>
           ))}
         </div>
