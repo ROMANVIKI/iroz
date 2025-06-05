@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Briefcase, Settings, ShieldCheck, Handshake } from "lucide-react";
+import { Settings, ShieldCheck, Handshake, BicepsFlexed } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,7 +12,7 @@ const Benefits = () => {
     {
       title: "Entrepreneurial Experience",
       desc: "Benefit from our extensive experience in entrepreneurship. We know what it takes to be successful.",
-      icon: Briefcase,
+      icon: BicepsFlexed,
     },
     {
       title: "Bespoke Solutions",
@@ -57,7 +57,7 @@ const Benefits = () => {
     <section
       ref={sectionRef}
       id="benefits"
-      className="font-sans border-t-4 rounded-lg w-full border-t-indigo-400 pb-10 pt-10"
+      className="font-sans border-t-4 rounded-lg w-full border-t-indigo-400 pb-10 pt-12"
     >
       <div className="container mx-auto px-4 flex flex-col items-center text-center">
         <p className="font-semibold text-gray-500 text-sm mb-2">

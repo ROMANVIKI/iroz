@@ -53,7 +53,7 @@ const FeaturesSection = () => {
   return (
     <section
       id="feature-section"
-      className=" pb-10 border-2 border-t-indigo-400 border-b-transparent border-r-transparent border-l-transparent"
+      className=" pb-10 border-3 border-t-indigo-400 border-b-transparent border-r-transparent border-l-transparent"
     >
       <div className="flex max-md:flex-col max-md:space-y-12 md:space-x-8 items-start justify-center">
         {features.map((item, i) => (
