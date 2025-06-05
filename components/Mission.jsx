@@ -30,11 +30,11 @@ const Mission = () => {
   return (
     <section
       id="mission"
-      className="pt-20 pb-20 border-t-4 border-t-indigo-400 border-b-0 border-r-0 border-l-0 bg-white"
+      className=" border-t-4 rounded-lg border-t-indigo-400 border-b-0 border-r-0 border-l-0 "
     >
       <div
         ref={cardRef}
-        className="max-w-3xl mx-auto p-8 bg-white rounded-lg shadow-lg border border-gray-200"
+        className="max-w-3xl mx-auto text-center p-8 bg-white rounded-lg "
       >
         <p className="text-sm text-gray-500 mb-2">Our Mission</p>
         <h1 className="text-2xl font-bold mb-4">

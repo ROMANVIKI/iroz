@@ -31,7 +31,7 @@ const Footer = () => {
   return (
     <footer
       ref={footerRef}
-      className="bg-white border-t border-gray-300 pt-10 pb-8 px-6 max-w-6xl mx-auto
+      className=" pt-10 pb-8 px-6 max-w-6xl mx-auto
         flex flex-col max-sm:space-y-6 sm:flex-row sm:justify-between sm:items-center
         text-center sm:text-left gap-4"
     >

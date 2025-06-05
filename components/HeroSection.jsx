@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Image from "next/image";
+import NotificationLine from "./NotificationLine";
 
 const HeroSection = () => {
   const linesRef = useRef([]);
@@ -18,8 +19,8 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="min-h-screen w-full font-sans flex items-center justify-center bg-white">
-      <div className="container flex flex-col justify-center items-center px-4 text-center space-y-10">
+    <section className="min-h-screen w-full font-sans flex items-center justify-center ">
+      <div className="container px-2 flex flex-col justify-center items-center  text-center space-y-10">
         <h1
           ref={(el) => (linesRef.current[0] = el)}
           className="text-3xl bg-gradient-to-r from-blue-500 to-violet-500 bg-clip-text text-transparent"

@@ -30,13 +30,15 @@ const OurPromise = () => {
   return (
     <div
       ref={cardRef}
-      className="max-w-3xl mx-auto p-8 bg-white rounded-lg shadow-md border border-gray-300
+      className="max-w-3xl mx-auto p-8  rounded-lg  border border-gray-300
       pt-20 pb-20 border-t-4 border-t-gray-400 border-b-0 border-r-0 border-l-0
       flex flex-col space-y-4 text-left"
     >
-      <p className="text-sm text-gray-500">Our Promise</p>
-      <h1 className="text-2xl font-bold">Helping Your Business Grow</h1>
-      <p className="text-gray-700 leading-relaxed">
+      <p className="text-sm text-gray-500 text-center">Our Promise</p>
+      <h1 className="text-2xl font-bold text-center">
+        Helping Your Business Grow
+      </h1>
+      <p className="text-gray-700 leading-relaxed text-center">
         Our services are built on the methods, techniques, and strategies we
         have developed, tested, and refined as entrepreneurs. With deep
         expertise across industries and business models, we provide tailored

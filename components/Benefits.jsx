@@ -33,8 +33,8 @@ const Benefits = () => {
     <section
       ref={sectionRef}
       id="benefits"
-      className="pt-20 pb-20 font-sans border-t-4 border-t-indigo-400 border-b-0 border-r-0 border-l-0
-        bg-white shadow-lg"
+      className="font-sans border-t-4 rounded-lg w-full border-t-indigo-400 border-b-0 border-r-0 border-l-0 pb-10 pt-10
+         "
     >
       <div className="container mx-auto px-4 flex flex-col items-center text-center">
         <p className="font-semibold text-gray-500 text-sm mb-2">
@@ -61,10 +61,7 @@ const Benefits = () => {
               desc: "We focus on building lasting relationships based on trust and collaboration.",
             },
           ].map(({ title, desc }, idx) => (
-            <div
-              key={idx}
-              className="benefit-item space-y-4 p-6 bg-white rounded-lg shadow-md border border-gray-200 relative"
-            >
+            <div key={idx} className="benefit-item space-y-4 p-6  relative">
               <Star
                 size={24}
                 color="#3b82f6" // Tailwind indigo-500 blue
