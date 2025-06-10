@@ -6,6 +6,7 @@ import Benefits from "@/components/Benefits.jsx";
 import Mission from "@/components/Mission.jsx";
 import OurPromise from "@/components/OurPromise.jsx";
 import NotificationLine from "@/components/NotificationLine.jsx";
+import Showcase from "@/components/Showcase.jsx";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <Benefits />
         <Mission />
         <OurPromise />
+        <Showcase />
         <Footer />
       </div>
     </>
