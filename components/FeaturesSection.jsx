@@ -33,7 +33,7 @@ const FeaturesSection = () => {
   const featureRefs = useRef([]);
 
   useEffect(() => {
-    featureRefs.current.forEach((ref, i) => {
+    featureRefs.current.forEach((ref) => {
       const q = gsap.utils.selector(ref);
 
       gsap.from(q(".feature-child"), {
@@ -53,23 +53,28 @@ const FeaturesSection = () => {
   return (
     <section
       id="feature-section"
-      className=" pb-10 border-3 flex justify-center border-t-indigo-400 border-b-transparent border-r-transparent border-l-transparent"
+      className="pt-12 pb-10 border-t-4 border-t-indigo-400"
     >
-      <div className="flex max-md:flex-col max-md:space-y-12 md:space-x-8 items-start justify-center">
+      <div className="flex max-md:flex-col max-md:space-y-12 md:space-x-8 items-center justify-center px-4">
         {features.map((item, i) => (
           <div
             key={i}
             ref={(el) => (featureRefs.current[i] = el)}
-            className="text-center pt-8 w-full max-w-sm"
+            className="text-center pt-4 w-full max-w-sm"
           >
             <div className="feature-child flex justify-center">
-              <Image src={item.img} alt={item.title} width={300} height={300} />
+              <Image src={item.img} alt={item.title} width={250} height={250} />
             </div>
-            <div className="space-y-4 px-4">
-              <h1 className="feature-child text-xl font-semibold">
+
+            <div className="space-y-4 px-2 mt-4">
+              <h1 className="feature-child text-xl font-semibold text-blue-600 dark:text-sky-400">
                 {item.title}
               </h1>
-              <p className="feature-child text-gray-600">{item.description}</p>
+
+              <p className="feature-child text-gray-600 leading-relaxed">
+                {item.description}
+              </p>
+
               <div className="feature-child">
                 <Button name={"Learn More"} />
               </div>

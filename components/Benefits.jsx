@@ -34,56 +34,45 @@ const Benefits = () => {
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    const el = sectionRef.current;
-    gsap.fromTo(
-      el.querySelectorAll(".benefit-item"),
-      { autoAlpha: 0, y: 50 },
-      {
-        duration: 1,
-        autoAlpha: 1,
-        y: 0,
-        stagger: 0.3,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: el,
-          start: "top 80%",
-          toggleActions: "play none none reverse",
-        },
+    const q = gsap.utils.selector(sectionRef);
+    gsap.from(q(".feature-child"), {
+      opacity: 0,
+      y: 40,
+      stagger: 0.2,
+      duration: 0.8,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top 85%",
       },
-    );
+    });
   }, []);
 
   return (
     <section
       ref={sectionRef}
       id="benefits"
-      className="font-sans border-t-4 rounded-lg w-full border-t-indigo-400 pb-10 pt-12"
+      className="p-4 flex justify-center flex-col items-center space-y-6"
     >
-      <div className="container mx-auto px-4 flex flex-col items-center text-center">
-        <p className="font-semibold text-gray-500 text-sm mb-2">
+      <div className="text-center feature-child">
+        <p className="font-semibold text-gray-500 text-sm">
           Our Unique Approach
         </p>
-        <h1 className="text-3xl font-bold pb-14">Your Benefits</h1>
-
-        <div className="grid gap-8 max-sm:grid-cols-1 sm:grid-cols-2 max-w-5xl w-full">
-          {benefits.map(({ title, desc, icon: Icon }, idx) => (
-            <div
-              key={idx}
-              className="benefit-item flex items-center justify-center space-y-4 p-6 flex-col"
-            >
-              <div>
-                <Icon size={24} color="#3b82f6" />
-              </div>
-              <div>
-                <h2 className="text-2xl font-semibold ">{title}</h2>
-              </div>
-              <div>
-                <p className="text-gray-600">{desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+        <h1 className="text-3xl font-bold text-blue-600 dark:text-sky-400">
+          Your Benefits
+        </h1>
       </div>
+
+      {benefits.map(({ title, desc, icon: Icon }, idx) => (
+        <div
+          key={idx}
+          className="feature-child text-center flex flex-col items-center space-y-3 p-4"
+        >
+          <Icon size={32} className="text-blue-600" />
+          <h2 className="text-xl font-semibold">{title}</h2>
+          <p className="text-gray-600 max-w-xl">{desc}</p>
+        </div>
+      ))}
     </section>
   );
 };
