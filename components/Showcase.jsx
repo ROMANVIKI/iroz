@@ -74,7 +74,7 @@ const Showcase = () => {
                 alt="iroz CEO"
                 width={250}
                 height={250}
-                className="rounded-full shadow-lg"
+                className=" shadow-lg"
               />
             </div>
 

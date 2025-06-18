@@ -7,23 +7,23 @@ import Mission from "@/components/Mission.jsx";
 import OurPromise from "@/components/OurPromise.jsx";
 import NotificationLine from "@/components/NotificationLine.jsx";
 import Showcase from "@/components/Showcase.jsx";
+import SliderComp from "@/components/SliderComp.jsx";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="pt-20">
+      <div className="pt-18">
         <NotificationLine />
       </div>
-      <div className=" p-2">
-        <HeroSection />
-        <FeaturesSection />
-        <Benefits />
-        <Mission />
-        <OurPromise />
-        <Showcase />
-        <Footer />
-      </div>
+      {/* <SliderComp /> */}
+      <HeroSection />
+      <FeaturesSection />
+      <Benefits />
+      <Mission />
+      <OurPromise />
+      <Showcase />
+      <Footer />
     </>
   );
 }
