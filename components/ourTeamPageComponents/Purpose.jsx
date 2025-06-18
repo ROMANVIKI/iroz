@@ -51,10 +51,10 @@ const Purpose = () => {
 
               <p className="text-gray-700 leading-relaxed text-lg">
                 Our purpose at{" "}
-                <span className="font-semibold text-blue-600">Sequency</span> is
-                to build a trusting and long-term partnership with our customers
-                by helping them achieve their business goals while maintaining
-                the highest standards of{" "}
+                <span className="font-semibold text-blue-600">Iroz</span> is to
+                build a trusting and long-term partnership with our customers by
+                helping them achieve their business goals while maintaining the
+                highest standards of{" "}
                 <span className="font-medium text-purple-600">integrity</span>,{" "}
                 <span className="font-medium text-blue-600">quality</span> and{" "}
                 <span className="font-medium text-green-600">service</span>.
@@ -67,7 +67,7 @@ const Purpose = () => {
                   <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-600 rounded-full border-2 border-white"></div>
                 </div>
                 <span className="text-sm text-gray-500">
-                  Trusted by 100+ clients
+                  Trusted by 30+ clients
                 </span>
               </div>
             </div>

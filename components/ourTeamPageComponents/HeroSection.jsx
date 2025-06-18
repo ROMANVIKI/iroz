@@ -14,8 +14,7 @@ const HeroSection = () => {
             </h1>
           </div>
           <p className="text-lg text-gray-600 mt-6 max-w-2xl mx-auto">
-            Meet the visionary leader driving innovation and excellence at
-            Sequency
+            Meet the visionary leader driving innovation and excellence at Iroz
           </p>
         </div>
 

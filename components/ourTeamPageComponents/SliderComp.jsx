@@ -366,7 +366,7 @@ export default function SliderComp() {
   return (
     <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Main Slider Container */}
-      <div className="relative h-[400px] sm:h-[500px] lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl">
+      <div className="relative h-[400px] sm:h-[500px] lg:h-[400px] rounded-3xl overflow-hidden shadow-2xl">
         {/* Card Display */}
         <div
           className="flex transition-transform duration-700 ease-in-out h-full"

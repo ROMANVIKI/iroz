@@ -40,7 +40,7 @@ const HeroSection = () => {
   return (
     <section
       ref={containerRef}
-      className="relative w-full min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 overflow-hidden"
+      className="relative w-full pt-20 pb-20 min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 overflow-hidden"
       style={{
         backgroundImage: `
           radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
@@ -79,7 +79,7 @@ const HeroSection = () => {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col justify-center items-center text-center space-y-6 sm:space-y-8 lg:space-y-12 max-w-4xl mx-auto">
+        <div className="flex flex-col justify-center items-center text-center space-y-4 sm:space-y-8 lg:space-y-12 max-w-4xl mx-auto">
           {/* Main Heading */}
           <div className="space-y-4 sm:space-y-6">
             <h1
