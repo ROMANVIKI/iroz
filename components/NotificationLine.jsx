@@ -2,7 +2,7 @@
 
 const NotificationLine = () => {
   return (
-    <div className="w-full relative overflow-hidden shadow-lg z-50">
+    <div className="w-full relative overflow-hidden shadow-lg ">
       {/* Background with gradient and subtle animation */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-gradient-x"></div>
 
