@@ -87,7 +87,7 @@ const OurPromise = () => {
               >
                 Helping Your Business
                 <br />
-                <span className="relative">
+                <span className="relative from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent leading-tight">
                   Grow & Thrive
                   <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
                 </span>

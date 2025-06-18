@@ -13,7 +13,7 @@ const NotificationLine = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 blur-sm opacity-75 animate-pulse"></div>
 
       {/* Main content container */}
-      <div className="relative px-6 py-3 border-y border-white/20">
+      <div className="relative px-6  border-y border-white/20">
         {/* Animated text content */}
         <div className="animate-marquee whitespace-nowrap text-white font-semibold text-sm md:text-base flex items-center space-x-6">
           {/* One notification block */}
