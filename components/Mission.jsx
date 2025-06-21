@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { CalendarClock, HandPlatter, HandHelping } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -59,9 +60,9 @@ const Mission = () => {
       {/* Stats or additional content could go here */}
       <div className="feature-child mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl w-full">
         {[
-          { value: "3+", label: "Years Experience" },
-          { value: "35+", label: "Clients Served" },
-          { value: "24/7", label: "Support" },
+          { value: "3+", label: "Years Experience", Icon: <CalendarClock /> },
+          { value: "35+", label: "Clients Served", Icon: <HandPlatter /> },
+          { value: "24/7", label: "Support", Icon: <HandHelping /> },
         ].map((item, index) => (
           <div
             key={index}
@@ -70,6 +71,9 @@ const Mission = () => {
             <p className="text-3xl font-bold text-indigo-600 mb-2">
               {item.value}
             </p>
+            <span className="flex justify-center py-2  text-indigo-600 text-center">
+              {item.Icon}
+            </span>
             <p className="text-gray-600">{item.label}</p>
           </div>
         ))}

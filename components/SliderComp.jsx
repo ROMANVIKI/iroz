@@ -57,9 +57,9 @@ export default function ImageSlider() {
   };
 
   return (
-    <div className="relative w-full  mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="relative w-full pb-4  mx-auto px-4 sm:px-6 lg:px-8">
       {/* Main Slider Container */}
-      <div className="relative h-[200px] sm:h-[500px] w-full lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl">
+      <div className="relative h-[200px] sm:h-[500px] w-full lg:h-[600px] rounded-3xl overflow-hidden ">
         {/* Image Display */}
         <div
           className="flex transition-transform duration-700 ease-in-out h-full"
@@ -119,20 +119,20 @@ export default function ImageSlider() {
       </div>
 
       {/* Pagination Dots */}
-      <div className="flex justify-center items-center mt-2 space-x-3">
-        {imageData.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`transition-all duration-300 rounded-full ${
-              index === currentSlide
-                ? "w-8 h-3 bg-gradient-to-r from-blue-500 to-violet-500 shadow-lg"
-                : "w-3 h-3 bg-gray-300 hover:bg-gray-400"
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
+      {/* <div className="flex justify-center items-center mt-2 space-x-3"> */}
+      {/*   {imageData.map((_, index) => ( */}
+      {/*     <button */}
+      {/*       key={index} */}
+      {/*       onClick={() => goToSlide(index)} */}
+      {/*       className={`transition-all duration-300 rounded-full ${ */}
+      {/*         index === currentSlide */}
+      {/*           ? "w-8 h-3 bg-gradient-to-r from-blue-500 to-violet-500 shadow-lg" */}
+      {/*           : "w-3 h-3 bg-gray-300 hover:bg-gray-400" */}
+      {/*       }`} */}
+      {/*       aria-label={`Go to slide ${index + 1}`} */}
+      {/*     /> */}
+      {/*   ))} */}
+      {/* </div> */}
 
       {/* Control Panel */}
       {/* <div className="flex justify-center items-center mt-6 space-x-4"> */}

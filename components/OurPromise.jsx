@@ -50,7 +50,7 @@ const OurPromise = () => {
   }, []);
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50/30 relative overflow-hidden">
+    <section className="py-6 bg-gradient-to-br from-gray-50 to-blue-50/30 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-32 h-32 bg-blue-200/20 rounded-full blur-2xl"></div>
@@ -207,7 +207,7 @@ const OurPromise = () => {
                 ref={(el) => (elementsRef.current[4] = el)}
                 className="text-center mt-12"
               >
-                <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 hover:from-blue-700 hover:to-purple-700">
+                <button className="inline-flex max-md:text-sm items-center px-4 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 hover:from-blue-700 hover:to-purple-700">
                   Start Your Growth Journey
                   <svg
                     className="ml-2 w-5 h-5"

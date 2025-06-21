@@ -188,13 +188,13 @@ const Footer = () => {
                 href="#"
                 className="block text-gray-400 hover:text-blue-400 transition-all duration-200 hover:translate-x-1 transform py-1"
               >
-                About Us
+                Our Team
               </a>
               <a
                 href="#"
                 className="block text-gray-400 hover:text-blue-400 transition-all duration-200 hover:translate-x-1 transform py-1"
               >
-                Services
+                Our Services
               </a>
               <a
                 href="#"
