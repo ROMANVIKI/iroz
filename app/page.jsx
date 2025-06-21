@@ -13,9 +13,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="pt-14">
-        <NotificationLine />
-      </div>
+      <NotificationLine />
       <SliderComp />
       <HeroSection />
       <FeaturesSection />

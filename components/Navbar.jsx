@@ -2,6 +2,8 @@
 import Link from "next/link";
 import { Menu, X, ArrowDown, ArrowUp } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
+import Logo from "../public/assets/images/tokaz-logo.png";
 
 const Navbar = () => {
   const subMenuLink = [
@@ -17,11 +19,9 @@ const Navbar = () => {
   return (
     <>
       {/* Fixed Top Navbar */}
-      <nav className="fixed top-0 mt-[2px]  outline outline-r-0 outline-l-0 outline-black left-0 z-50 w-full backdrop-blur-md bg-white/70 p-2">
+      <nav className="border border-d-none border-l-none border-r-none border-t-black w-full backdrop-blur-md bg-white/70 shadow-md ">
         <div className="flex justify-between items-center max-w-6xl mx-auto">
-          <h1 className="text-3xl text-gray-700 font-bold">
-            <Link href="/">IROZ</Link>
-          </h1>
+          <Image src={Logo} width={80} />
 
           <div
             onClick={() => setIsNavOpen(!isNavOpen)}
