@@ -2,7 +2,6 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Image from "next/image";
-import SliderComp from "../components/SliderComp.jsx";
 
 const HeroSection = () => {
   const linesRef = useRef([]);
@@ -41,9 +40,8 @@ const HeroSection = () => {
   return (
     <section
       ref={containerRef}
-      className="relative w-full flex flex-col py-6 min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative w-full flex flex-col pb-6 min-h-screen flex items-center justify-center overflow-hidden"
     >
-      <SliderComp />
       {/* Animated Background Elements */}
       {/* <div className="absolute inset-0 overflow-hidden pointer-events-none"> */}
       {/* Floating geometric shapes */}
