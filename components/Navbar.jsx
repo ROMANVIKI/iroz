@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <>
       {/* Fixed Top Navbar */}
-      <nav className="border border-gray-200 border-d-none border-l-none border-r-none  w-full backdrop-blur-md bg-white/70 shadow-md ">
+      <nav className="border z-50 border-gray-200 border-d-none border-l-none border-r-none  w-full backdrop-blur-md bg-white/70 shadow-md ">
         <div className="flex justify-between items-center max-w-6xl mx-auto">
           <Image alt="tokaz logo" src={Logo} width={80} />
 
@@ -45,10 +45,10 @@ const Navbar = () => {
             </li>
 
             <li className="group relative cursor-pointer">
-              <Link href="/our-services" className="relative flex items-center">
+              <p>
                 Our Services
                 <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-black group-hover:w-full transition-all duration-300 origin-right"></span>
-              </Link>
+              </p>
 
               {/* Desktop submenu */}
               <ul
@@ -74,13 +74,13 @@ const Navbar = () => {
 
       {/* Mobile Dropdown */}
       <div
-        className={`fixed w-1/2 top-16 right-0 h-screen bg-white/90 backdrop-blur-lg shadow-xl rounded-md px-6 py-4 transition-all duration-300 ease-in-out z-40 ${
+        className={`fixed w-1/2  top-16 right-0 h-screen bg-white/90 backdrop-blur-lg shadow-xl rounded-md px-6 py-4 transition-all duration-300 ease-in-out  ${
           isNavOpen
             ? "opacity-100 scale-100"
             : "opacity-0 scale-95 pointer-events-none"
         } md:hidden`}
       >
-        <ul className="space-y-4">
+        <ul className="space-y-4 z-50">
           <li>
             <Link
               href="/our-team"

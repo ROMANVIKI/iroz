@@ -1,11 +1,9 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
-import Image1 from "../public/assets/images/image1.png";
-import Image2 from "../public/assets/images/image2.png";
-import Image3 from "../public/assets/images/image4.png";
-import Image4 from "../public/assets/images/image5.png";
-import Image5 from "../public/assets/images/image13.jpg";
-import Image6 from "../public/assets/images/image14.jpg";
+import Image1 from "../public/assets/images/image1.jpg";
+import Image2 from "../public/assets/images/image2.jpg";
+import Image3 from "../public/assets/images/image3.jpg";
+import Image4 from "../public/assets/images/image4.jpg";
 import Image from "next/image";
 
 const imageData = [
@@ -13,8 +11,6 @@ const imageData = [
   { id: 2, imageUrl: Image2, alt: "Image 2" },
   { id: 3, imageUrl: Image3, alt: "Image 3" },
   { id: 4, imageUrl: Image4, alt: "Image 4" },
-  { id: 5, imageUrl: Image5, alt: "Image 5" },
-  { id: 6, imageUrl: Image6, alt: "Image 6" },
 ];
 
 export default function ImageSlider() {
@@ -83,9 +79,9 @@ export default function ImageSlider() {
   };
 
   return (
-    <div className="w-full  mx-auto select-none">
+    <div className="w-full mx-auto select-none relative z-0">
       <div
-        className="relative h-[200px] sm:h-[500px] w-full lg:h-[600px] overflow-hidden"
+        className="relative z-0 h-[200px] sm:h-[500px] w-full lg:h-[400px] overflow-hidden"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
@@ -93,11 +89,11 @@ export default function ImageSlider() {
         onMouseUp={handleMouseUp}
       >
         <div
-          className="flex transition-transform duration-700 ease-in-out h-full"
+          className="flex z-0 transition-transform duration-700 ease-in-out h-full"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >
           {imageData.map((image) => (
-            <div key={image.id} className="min-w-full h-full relative">
+            <div key={image.id} className="min-w-full  h-full relative">
               <Image
                 src={image.imageUrl}
                 alt={image.alt}
