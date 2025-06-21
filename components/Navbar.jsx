@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <>
       {/* Fixed Top Navbar */}
-      <nav className="fixed top-0 left-0 z-50 w-full backdrop-blur-md bg-white/70 shadow-md p-4">
+      <nav className="fixed top-0  left-0 z-50 w-full backdrop-blur-md bg-white/70 shadow-md p-2">
         <div className="flex justify-between items-center max-w-6xl mx-auto">
           <h1 className="text-3xl text-gray-700 font-bold">
             <Link href="/">IROZ</Link>

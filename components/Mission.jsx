@@ -66,7 +66,7 @@ const Mission = () => {
         ].map((item, index) => (
           <div
             key={index}
-            className="bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center"
+            className="bg-white p-6 outline outline-orange-500 rounded-xl shadow-md border border-gray-100 text-center"
           >
             <p className="text-3xl font-bold text-indigo-600 mb-2">
               {item.value}
