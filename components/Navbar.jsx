@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <>
       {/* Fixed Top Navbar */}
-      <nav className="border border-d-none border-l-none border-r-none border-t-black w-full backdrop-blur-md bg-white/70 shadow-md ">
+      <nav className="border border-gray-200 border-d-none border-l-none border-r-none  w-full backdrop-blur-md bg-white/70 shadow-md ">
         <div className="flex justify-between items-center max-w-6xl mx-auto">
           <Image alt="tokaz logo" src={Logo} width={80} />
 

@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <NotificationLine />
+      {/* <NotificationLine /> */}
       <SliderComp />
       <HeroSection />
       <FeaturesSection />
