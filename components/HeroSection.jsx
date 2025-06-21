@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Image from "next/image";
+import SliderComp from "../components/SliderComp.jsx";
 
 const HeroSection = () => {
   const linesRef = useRef([]);
@@ -29,55 +30,46 @@ const HeroSection = () => {
     });
 
     // Background gradient animation
-    gsap.to(containerRef.current, {
-      backgroundPosition: "200% center",
-      duration: 8,
-      ease: "none",
-      repeat: -1,
-    });
+    // gsap.to(containerRef.current, {
+    //   backgroundPosition: "200% center",
+    //   duration: 8,
+    //   ease: "none",
+    //   repeat: -1,
+    // });
   }, []);
 
   return (
     <section
       ref={containerRef}
-      className="relative w-full pt-20 pb-20 min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 overflow-hidden"
-      style={{
-        backgroundImage: `
-          radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
-          radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-          radial-gradient(circle at 40% 40%, rgba(14, 165, 233, 0.05) 0%, transparent 50%)
-        `,
-        backgroundSize: "400% 400%",
-      }}
+      className="relative w-full flex flex-col pt-6 pb-20 min-h-screen flex items-center justify-center overflow-hidden"
     >
+      <SliderComp />
       {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Floating geometric shapes */}
-        <div
-          ref={(el) => (floatingElementsRef.current[0] = el)}
-          className="absolute top-20 left-10 w-4 h-4 sm:w-6 sm:h-6 bg-blue-200 rounded-full opacity-60"
-        />
-        <div
-          ref={(el) => (floatingElementsRef.current[1] = el)}
-          className="absolute top-40 right-20 w-3 h-3 sm:w-4 sm:h-4 bg-violet-200 rotate-45 opacity-70"
-        />
-        <div
-          ref={(el) => (floatingElementsRef.current[2] = el)}
-          className="absolute bottom-32 left-20 w-5 h-5 sm:w-8 sm:h-8 border-2 border-indigo-200 rounded-full opacity-50"
-        />
-        <div
-          ref={(el) => (floatingElementsRef.current[3] = el)}
-          className="absolute bottom-20 right-10 w-6 h-6 sm:w-10 sm:h-10 bg-gradient-to-br from-blue-200 to-violet-200 rounded-lg rotate-12 opacity-40"
-        />
-
-        {/* Gradient orbs */}
-        <div className="absolute top-1/4 left-1/4 w-32 h-32 sm:w-64 sm:h-64 bg-gradient-to-r from-blue-300/20 to-violet-300/20 rounded-full blur-3xl animate-pulse" />
-        <div
-          className="absolute bottom-1/3 right-1/3 w-24 h-24 sm:w-48 sm:h-48 bg-gradient-to-r from-indigo-300/20 to-cyan-300/20 rounded-full blur-2xl animate-pulse"
-          style={{ animationDelay: "1s" }}
-        />
-      </div>
-
+      {/* <div className="absolute inset-0 overflow-hidden pointer-events-none"> */}
+      {/* Floating geometric shapes */}
+      {/*   <div */}
+      {/*     ref={(el) => (floatingElementsRef.current[0] = el)} */}
+      {/*     className="absolute top-20 left-10 w-4 h-4 sm:w-6 sm:h-6 bg-blue-200 rounded-full opacity-60" */}
+      {/*   /> */}
+      {/*   <div */}
+      {/*     ref={(el) => (floatingElementsRef.current[1] = el)} */}
+      {/*     className="absolute top-40 right-20 w-3 h-3 sm:w-4 sm:h-4 bg-violet-200 rotate-45 opacity-70" */}
+      {/*   /> */}
+      {/*   <div */}
+      {/*     ref={(el) => (floatingElementsRef.current[2] = el)} */}
+      {/*     className="absolute bottom-32 left-20 w-5 h-5 sm:w-8 sm:h-8 border-2 border-indigo-200 rounded-full opacity-50" */}
+      {/*   /> */}
+      {/*   <div */}
+      {/*     ref={(el) => (floatingElementsRef.current[3] = el)} */}
+      {/*     className="absolute bottom-20 right-10 w-6 h-6 sm:w-10 sm:h-10 bg-gradient-to-br from-blue-200 to-violet-200 rounded-lg rotate-12 opacity-40" */}
+      {/*   /> */}
+      {/* Gradient orbs */}
+      {/* <div className="absolute top-1/4 left-1/4 w-32 h-32 sm:w-64 sm:h-64 bg-gradient-to-r from-blue-300/20 to-violet-300/20 rounded-full blur-3xl animate-pulse" /> */}
+      {/* <div */}
+      {/*   className="absolute bottom-1/3 right-1/3 w-24 h-24 sm:w-48 sm:h-48 bg-gradient-to-r from-indigo-300/20 to-cyan-300/20 rounded-full blur-2xl animate-pulse" */}
+      {/*   style={{ animationDelay: "1s" }} */}
+      {/* /> */}
+      {/* </div> */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col justify-center items-center text-center space-y-4 sm:space-y-8 lg:space-y-12 max-w-4xl mx-auto">
           {/* Main Heading */}
@@ -125,33 +117,33 @@ const HeroSection = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div
-            ref={(el) => (linesRef.current[4] = el)}
-            className="flex flex-col sm:flex-row gap-4 sm:gap-6 pt-4 sm:pt-6"
-          >
-            <button className="group px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-violet-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-              <span className="flex items-center justify-center space-x-2">
-                <span>Get Started</span>
-                <svg
-                  className="w-4 h-4 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 7l5 5m0 0l-5 5m5-5H6"
-                  />
-                </svg>
-              </span>
-            </button>
-
-            <button className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-xl hover:border-blue-500 hover:text-blue-600 transition-all duration-300 backdrop-blur-sm">
-              Learn More
-            </button>
-          </div>
+          {/* <div */}
+          {/*   ref={(el) => (linesRef.current[4] = el)} */}
+          {/*   className="flex flex-col sm:flex-row gap-4 sm:gap-6 pt-4 sm:pt-6" */}
+          {/* > */}
+          {/*   <button className="group px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-violet-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"> */}
+          {/*     <span className="flex items-center justify-center space-x-2"> */}
+          {/*       <span>Get Started</span> */}
+          {/*       <svg */}
+          {/*         className="w-4 h-4 group-hover:translate-x-1 transition-transform" */}
+          {/*         fill="none" */}
+          {/*         stroke="currentColor" */}
+          {/*         viewBox="0 0 24 24" */}
+          {/*       > */}
+          {/*         <path */}
+          {/*           strokeLinecap="round" */}
+          {/*           strokeLinejoin="round" */}
+          {/*           strokeWidth={2} */}
+          {/*           d="M13 7l5 5m0 0l-5 5m5-5H6" */}
+          {/*         /> */}
+          {/*       </svg> */}
+          {/*     </span> */}
+          {/*   </button> */}
+          {/**/}
+          {/*   <button className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-xl hover:border-blue-500 hover:text-blue-600 transition-all duration-300 backdrop-blur-sm"> */}
+          {/*     Learn More */}
+          {/*   </button> */}
+          {/* </div> */}
 
           {/* Hero Image/Icon */}
           <div
@@ -189,7 +181,7 @@ const HeroSection = () => {
           >
             <div className="flex items-center space-x-2">
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-              <span>Trusted by 500+ Entrepreneurs</span>
+              <span>Trusted by 35+ Entrepreneurs</span>
             </div>
             <div className="flex items-center space-x-2">
               <div
@@ -208,13 +200,12 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
-        </div>
-      </div>
+      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"> */}
+      {/*   <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center"> */}
+      {/*     <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div> */}
+      {/*   </div> */}
+      {/* </div> */}
     </section>
   );
 };

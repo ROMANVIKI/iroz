@@ -57,9 +57,9 @@ export default function ImageSlider() {
   };
 
   return (
-    <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="relative w-full  mx-auto px-4 sm:px-6 lg:px-8">
       {/* Main Slider Container */}
-      <div className="relative h-[400px] sm:h-[500px] lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl">
+      <div className="relative h-[200px] sm:h-[500px] w-full lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl">
         {/* Image Display */}
         <div
           className="flex transition-transform duration-700 ease-in-out h-full"
@@ -79,7 +79,7 @@ export default function ImageSlider() {
         {/* Navigation Arrows */}
         <button
           onClick={prevSlide}
-          className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-black/30 hover:bg-black/50 backdrop-blur-sm text-white p-2 sm:p-3 rounded-full transition-all duration-300 hover:scale-110 group"
+          className="absolute left-0 sm:left-4 top-1/2 transform -translate-y-1/2  hover:bg-black/50 text-white p-2 sm:p-3 rounded-full transition-all duration-300 hover:scale-110 group"
           aria-label="Previous slide"
         >
           <svg
@@ -99,7 +99,7 @@ export default function ImageSlider() {
 
         <button
           onClick={nextSlide}
-          className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-black/30 hover:bg-black/50 backdrop-blur-sm text-white p-2 sm:p-3 rounded-full transition-all duration-300 hover:scale-110 group"
+          className="absolute right-0 sm:right-4 top-1/2 transform -translate-y-1/2  hover:bg-black/50  text-white p-2 sm:p-3 rounded-full transition-all duration-300 hover:scale-110 group"
           aria-label="Next slide"
         >
           <svg
@@ -119,7 +119,7 @@ export default function ImageSlider() {
       </div>
 
       {/* Pagination Dots */}
-      <div className="flex justify-center items-center mt-6 space-x-3">
+      <div className="flex justify-center items-center mt-2 space-x-3">
         {imageData.map((_, index) => (
           <button
             key={index}
@@ -135,46 +135,46 @@ export default function ImageSlider() {
       </div>
 
       {/* Control Panel */}
-      <div className="flex justify-center items-center mt-6 space-x-4">
-        <button
-          onClick={toggleAutoplay}
-          className={`px-4 sm:px-6 py-2 sm:py-3 rounded-xl font-medium transition-all duration-300 text-sm sm:text-base ${
-            isAutoplay
-              ? "bg-gradient-to-r from-gray-800 to-gray-900 text-white hover:from-gray-700 hover:to-gray-800 shadow-lg"
-              : "bg-gradient-to-r from-gray-100 to-gray-200 text-gray-800 hover:from-gray-200 hover:to-gray-300 shadow-md"
-          }`}
-        >
-          <span className="flex items-center space-x-2">
-            {isAutoplay ? (
-              <>
-                <svg
-                  className="w-4 h-4"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
-                </svg>
-                <span className="hidden sm:inline">Pause</span>
-              </>
-            ) : (
-              <>
-                <svg
-                  className="w-4 h-4"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-                <span className="hidden sm:inline">Play</span>
-              </>
-            )}
-          </span>
-        </button>
-
-        <div className="text-xs sm:text-sm text-gray-600 bg-gray-100 px-3 py-2 rounded-lg font-medium">
-          {currentSlide + 1} / {imageData.length}
-        </div>
-      </div>
+      {/* <div className="flex justify-center items-center mt-6 space-x-4"> */}
+      {/*   <button */}
+      {/*     onClick={toggleAutoplay} */}
+      {/*     className={`px-4 sm:px-6 py-2 sm:py-3 rounded-xl font-medium transition-all duration-300 text-sm sm:text-base ${ */}
+      {/*       isAutoplay */}
+      {/*         ? "bg-gradient-to-r from-gray-800 to-gray-900 text-white hover:from-gray-700 hover:to-gray-800 shadow-lg" */}
+      {/*         : "bg-gradient-to-r from-gray-100 to-gray-200 text-gray-800 hover:from-gray-200 hover:to-gray-300 shadow-md" */}
+      {/*     }`} */}
+      {/*   > */}
+      {/*     <span className="flex items-center space-x-2"> */}
+      {/*       {isAutoplay ? ( */}
+      {/*         <> */}
+      {/*           <svg */}
+      {/*             className="w-4 h-4" */}
+      {/*             fill="currentColor" */}
+      {/*             viewBox="0 0 24 24" */}
+      {/*           > */}
+      {/*             <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" /> */}
+      {/*           </svg> */}
+      {/*           <span className="hidden sm:inline">Pause</span> */}
+      {/*         </> */}
+      {/*       ) : ( */}
+      {/*         <> */}
+      {/*           <svg */}
+      {/*             className="w-4 h-4" */}
+      {/*             fill="currentColor" */}
+      {/*             viewBox="0 0 24 24" */}
+      {/*           > */}
+      {/*             <path d="M8 5v14l11-7z" /> */}
+      {/*           </svg> */}
+      {/*           <span className="hidden sm:inline">Play</span> */}
+      {/*         </> */}
+      {/*       )} */}
+      {/*     </span> */}
+      {/*   </button> */}
+      {/**/}
+      {/*   <div className="text-xs sm:text-sm text-gray-600 bg-gray-100 px-3 py-2 rounded-lg font-medium"> */}
+      {/*     {currentSlide + 1} / {imageData.length} */}
+      {/*   </div> */}
+      {/* </div> */}
     </div>
   );
 }

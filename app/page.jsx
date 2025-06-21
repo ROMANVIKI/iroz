@@ -16,7 +16,6 @@ export default function Home() {
       <div className="pt-18">
         <NotificationLine />
       </div>
-      {/* <SliderComp /> */}
       <HeroSection />
       <FeaturesSection />
       <Benefits />
