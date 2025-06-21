@@ -21,7 +21,7 @@ const Navbar = () => {
       {/* Fixed Top Navbar */}
       <nav className="border border-d-none border-l-none border-r-none border-t-black w-full backdrop-blur-md bg-white/70 shadow-md ">
         <div className="flex justify-between items-center max-w-6xl mx-auto">
-          <Image src={Logo} width={80} />
+          <Image alt="tokaz logo" src={Logo} width={80} />
 
           <div
             onClick={() => setIsNavOpen(!isNavOpen)}
