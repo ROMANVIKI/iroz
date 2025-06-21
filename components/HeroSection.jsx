@@ -41,7 +41,7 @@ const HeroSection = () => {
   return (
     <section
       ref={containerRef}
-      className="relative w-full flex flex-col pt-6 pb-20 min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative w-full flex flex-col py-6 min-h-screen flex items-center justify-center overflow-hidden"
     >
       <SliderComp />
       {/* Animated Background Elements */}
