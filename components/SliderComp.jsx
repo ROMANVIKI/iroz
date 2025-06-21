@@ -83,7 +83,7 @@ export default function ImageSlider() {
   };
 
   return (
-    <div className="w-full pt-2 mx-auto select-none">
+    <div className="w-full  mx-auto select-none">
       <div
         className="relative h-[200px] sm:h-[500px] w-full lg:h-[600px] overflow-hidden"
         onTouchStart={handleTouchStart}
