@@ -1,24 +1,43 @@
 "use client";
 import React, { useRef, useState } from "react";
+import Image1 from "../public/assets/images/image1.png";
+import Image2 from "../public/assets/images/image2.png";
+import Image3 from "../public/assets/images/image4.png";
+import Image4 from "../public/assets/images/image5.png";
+import Image5 from "../public/assets/images/image13.jpg";
+import Image6 from "../public/assets/images/image14.jpg";
+import Image from "next/image";
 
 const imageData = [
   {
     id: 1,
-    imageUrl:
-      "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&h=600&fit=crop",
+    imageUrl: Image1,
     alt: "Image 1",
   },
   {
     id: 2,
-    imageUrl:
-      "https://images.unsplash.com/photo-1542744094-3a31f272c490?w=1200&h=600&fit=crop",
+    imageUrl: Image2,
     alt: "Image 2",
   },
   {
     id: 3,
-    imageUrl:
-      "https://images.unsplash.com/photo-1486312338219-ce68e2c6b696?w=1200&h=600&fit=crop",
+    imageUrl: Image3,
     alt: "Image 3",
+  },
+  {
+    id: 4,
+    imageUrl: Image4,
+    alt: "Image 4",
+  },
+  {
+    id: 5,
+    imageUrl: Image5,
+    alt: "Image 5",
+  },
+  {
+    id: 6,
+    imageUrl: Image6,
+    alt: "Image 6",
   },
 ];
 
@@ -67,7 +86,7 @@ export default function ImageSlider() {
         >
           {imageData.map((image) => (
             <div key={image.id} className="min-w-full h-full relative">
-              <img
+              <Image
                 src={image.imageUrl}
                 alt={image.alt}
                 className="w-full h-full object-cover"
