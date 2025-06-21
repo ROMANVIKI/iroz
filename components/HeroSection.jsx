@@ -40,35 +40,9 @@ const HeroSection = () => {
   return (
     <section
       ref={containerRef}
-      className="relative w-full flex flex-col pb-6 min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative w-full flex flex-col pb-4  flex items-center justify-center overflow-hidden"
     >
-      {/* Animated Background Elements */}
-      {/* <div className="absolute inset-0 overflow-hidden pointer-events-none"> */}
-      {/* Floating geometric shapes */}
-      {/*   <div */}
-      {/*     ref={(el) => (floatingElementsRef.current[0] = el)} */}
-      {/*     className="absolute top-20 left-10 w-4 h-4 sm:w-6 sm:h-6 bg-blue-200 rounded-full opacity-60" */}
-      {/*   /> */}
-      {/*   <div */}
-      {/*     ref={(el) => (floatingElementsRef.current[1] = el)} */}
-      {/*     className="absolute top-40 right-20 w-3 h-3 sm:w-4 sm:h-4 bg-violet-200 rotate-45 opacity-70" */}
-      {/*   /> */}
-      {/*   <div */}
-      {/*     ref={(el) => (floatingElementsRef.current[2] = el)} */}
-      {/*     className="absolute bottom-32 left-20 w-5 h-5 sm:w-8 sm:h-8 border-2 border-indigo-200 rounded-full opacity-50" */}
-      {/*   /> */}
-      {/*   <div */}
-      {/*     ref={(el) => (floatingElementsRef.current[3] = el)} */}
-      {/*     className="absolute bottom-20 right-10 w-6 h-6 sm:w-10 sm:h-10 bg-gradient-to-br from-blue-200 to-violet-200 rounded-lg rotate-12 opacity-40" */}
-      {/*   /> */}
-      {/* Gradient orbs */}
-      {/* <div className="absolute top-1/4 left-1/4 w-32 h-32 sm:w-64 sm:h-64 bg-gradient-to-r from-blue-300/20 to-violet-300/20 rounded-full blur-3xl animate-pulse" /> */}
-      {/* <div */}
-      {/*   className="absolute bottom-1/3 right-1/3 w-24 h-24 sm:w-48 sm:h-48 bg-gradient-to-r from-indigo-300/20 to-cyan-300/20 rounded-full blur-2xl animate-pulse" */}
-      {/*   style={{ animationDelay: "1s" }} */}
-      {/* /> */}
-      {/* </div> */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto  sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col justify-center items-center text-center space-y-4 sm:space-y-8 lg:space-y-12 max-w-4xl mx-auto">
           {/* Main Heading */}
           <div className="space-y-4 sm:space-y-6">
