@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import {
   Phone,
@@ -11,15 +12,13 @@ import {
   CheckCircle,
   Menu,
   X,
-  Sparkles,
+  Zap,
   TrendingUp,
   Shield,
-  Zap,
   Globe,
-  Target,
 } from "lucide-react";
 
-export default function ModernSequencyPage() {
+export default function LightThemePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
 
@@ -33,18 +32,520 @@ export default function ModernSequencyPage() {
     {
       title: "Bank Account Opening",
       description:
-        "Streamlined banking solutions with our expert guidance. We connect you with the right financial partners for seamless account setup.",
+        "Streamlined banking solutions tailored to your business needs. We navigate complex requirements to get you connected with the right financial partners.",
       icon: <Building className="w-8 h-8" />,
-      gradient: "from-blue-500 to-purple-600",
-      delay: "delay-100",
+      gradient: "from-blue-500 to-cyan-500",
     },
     {
       title: "Company Formation & Restructuring",
       description:
-        "Tailored corporate structures including Swiss holdings, family trusts, and foundations designed for your unique objectives.",
+        "Strategic corporate structures designed for growth. From Swiss holdings to family trusts, we architect your success.",
       icon: <Users className="w-8 h-8" />,
-      gradient: "from-purple-500 to-pink-600",
-      delay: "delay-200",
+      gradient: "from-purple-500 to-pink-500",
     },
     {
-      title: "
+      title: "Accounting & Tax Optimization",
+      description:
+        "Intelligent financial management that maximizes efficiency and ensures compliance across all jurisdictions.",
+      icon: <TrendingUp className="w-8 h-8" />,
+      gradient: "from-emerald-500 to-teal-500",
+    },
+  ];
+
+  const testimonials = [
+    {
+      name: "Oliver Haas",
+      title: "School Principal - LernCenter",
+      quote:
+        "My website now works the way I imagined it would. Traffic and leads have doubled. Thanks to tokaz and the team's expertise, I now feel that I'm in good hands.",
+      website: "www.lerncenter.ch",
+      avatar: "OH",
+    },
+    {
+      name: "Alexander Radulow",
+      title: "Architect - lowal",
+      quote:
+        "Thank you tokaz. The simple design draws attention to the important things. Exactly what I was looking for.",
+      website: "www.lowal.ch",
+      avatar: "AR",
+    },
+    {
+      name: "Fabrizio Fuchs",
+      title: "Board member - Academic Gateway",
+      quote:
+        "It's impressive how quickly our website went from zero to 100%. Thanks to the incredible work of this motivated team, we will achieve our sales targets for this year!",
+      website: "www.academic-gateway.ch",
+      avatar: "FF",
+    },
+    {
+      name: "Serkan Dogan",
+      title: "Entrepreneur - VIZ",
+      quote:
+        "I have trusted in the skills of Dimitar and his team for 14 years. I have always been able to rely on receiving great performance with every service for my companies.",
+      website: "www.viz.ch",
+      avatar: "SD",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-white text-gray-900 overflow-x-hidden">
+      {/* Animated Background Elements */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-100/40 to-purple-100/40 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-1/2 -left-40 w-80 h-80 bg-gradient-to-br from-emerald-100/40 to-cyan-100/40 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute -bottom-40 right-1/2 w-80 h-80 bg-gradient-to-br from-pink-100/40 to-orange-100/40 rounded-full blur-3xl animate-pulse delay-2000"></div>
+      </div>
+
+      {/* Header */}
+      <header className="relative z-50">
+        <nav className="bg-white/95 backdrop-blur-md border-b border-gray-200 fixed w-full top-0">
+          <div className="container mx-auto px-6 py-4">
+            <div className="flex items-center justify-between">
+              <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                tokaz
+              </div>
+              <div className="hidden md:flex space-x-8">
+                <a
+                  href="#services"
+                  className="text-gray-700 hover:text-blue-600 transition-colors"
+                >
+                  Services
+                </a>
+                <a
+                  href="#team"
+                  className="text-gray-700 hover:text-blue-600 transition-colors"
+                >
+                  Team
+                </a>
+                <a
+                  href="#contact"
+                  className="text-gray-700 hover:text-blue-600 transition-colors"
+                >
+                  Contact
+                </a>
+              </div>
+              <button
+                className="md:hidden"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+              >
+                {isMenuOpen ? (
+                  <X className="w-6 h-6" />
+                ) : (
+                  <Menu className="w-6 h-6" />
+                )}
+              </button>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center pt-4">
+        <div className="container mx-auto px-6 text-center relative z-10">
+          <div className="animate-fade-in-up">
+            <h1 className="text-4xl md:text-8xl font-bold mb-8 leading-tight text-gray-900">
+              Tailored
+              <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent animate-gradient">
+                Corporate Solutions
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+              Ensuring That Your Business Works - Our main goal is your success
+              through comprehensive corporate services
+            </p>
+            <button className="group bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-6 rounded-full text-md font-semibold hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105">
+              Get Started Today
+              <ArrowRight className="inline-block ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
+            </button>
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="py-32 relative bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
+              What We Do
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"></div>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="group relative bg-white p-8 rounded-3xl border border-gray-200 hover:border-gray-300 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 overflow-hidden"
+              >
+                {/* Gradient overlay */}
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-3xl`}
+                ></div>
+
+                <div className="relative z-10">
+                  <div
+                    className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${service.gradient} mb-6 text-white`}
+                  >
+                    {service.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text transition-all duration-300">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
+                  <button className="text-blue-600 font-semibold hover:text-blue-800 flex items-center group-hover:translate-x-2 transition-all duration-300">
+                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Bank Account CTA */}
+      <section className="py-32 relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-purple-50"></div>
+        <div className="container mx-auto px-6 text-center relative z-10">
+          <div className="max-w-4xl mx-auto bg-white/80 backdrop-blur-xl p-12 rounded-3xl border border-gray-200 shadow-xl">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Your Successful Business Starts with Your Bank Account
+            </h2>
+            <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+              Efficient bank account opening to enable seamless financial
+              transactions and meet your financial needs worldwide. Our service
+              ensures fast processing and customized solutions for international
+              requirements.
+            </p>
+            <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-12 py-6 rounded-full text-xl font-bold hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105">
+              INITIATE NOW
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Company Structures */}
+      <section className="py-32 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-5xl font-bold mb-6 text-gray-900">
+                Professional Approach
+              </h2>
+              <h3 className="text-3xl font-semibold mb-8 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Company Structures that Cover Your Needs
+              </h3>
+              <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+                We develop tailor-made strategies for your specific plans,
+                whether for operating companies or to protect family assets.
+              </p>
+              <div className="space-y-4 mb-10">
+                {[
+                  "Swiss Holding Companies",
+                  "Trusts",
+                  "Family Foundations",
+                  "International SPV",
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center text-gray-700 hover:text-gray-900 transition-colors duration-300"
+                  >
+                    <div className="w-6 h-6 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500 flex items-center justify-center mr-4">
+                      <CheckCircle className="w-4 h-4 text-white" />
+                    </div>
+                    {item}
+                  </div>
+                ))}
+              </div>
+              <button className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-12 py-6 rounded-full text-xl font-bold hover:shadow-2xl hover:shadow-emerald-500/25 transition-all duration-300 transform hover:scale-105">
+                START NOW
+              </button>
+            </div>
+            <div className="relative">
+              <div className="bg-white p-12 rounded-3xl border border-gray-200 shadow-xl relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50"></div>
+                <div className="relative z-10 h-80 flex items-center justify-center">
+                  <div className="relative">
+                    <Building className="w-32 h-32 text-blue-500 animate-pulse" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 opacity-20 rounded-full blur-xl"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Financial Services */}
+      <section className="py-32 relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-50 to-cyan-50"></div>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl font-bold mb-6 text-gray-900">
+              We Uncover Profits
+            </h2>
+            <h3 className="text-3xl mb-8 bg-gradient-to-r from-emerald-600 to-cyan-600 bg-clip-text text-transparent">
+              Customised to Your Company - Strengthening Your Financial
+              Statements
+            </h3>
+            <p className="text-xl text-gray-700 mb-16 max-w-4xl mx-auto leading-relaxed">
+              We shape your accounting and tax reports so that they promote
+              efficiency and accuracy, meet legal requirements and ensure
+              long-term financial stability.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {[
+              {
+                number: "01",
+                title: "Accounting & Reporting",
+                gradient: "from-blue-500 to-cyan-500",
+              },
+              {
+                number: "02",
+                title: "Tax Return Preparation",
+                gradient: "from-purple-500 to-pink-500",
+              },
+              {
+                number: "03",
+                title: "Filing & Submission",
+                gradient: "from-emerald-500 to-teal-500",
+              },
+            ].map((item, index) => (
+              <div key={index} className="text-center group">
+                <div
+                  className={`w-20 h-20 rounded-full bg-gradient-to-r ${item.gradient} flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}
+                >
+                  <span className="text-2xl font-bold text-white">
+                    {item.number}
+                  </span>
+                </div>
+                <h4 className="text-2xl font-semibold text-gray-900 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text transition-all duration-300">
+                  {item.title}
+                </h4>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <button className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-12 py-6 rounded-full text-xl font-bold hover:shadow-2xl hover:shadow-emerald-500/25 transition-all duration-300 transform hover:scale-105">
+              CONTACT US TODAY
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-32 relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600"></div>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid md:grid-cols-3 gap-12 text-center">
+            {[
+              {
+                number: "500+",
+                label: "Projects",
+                icon: <Zap className="w-8 h-8" />,
+              },
+              {
+                number: "1000+",
+                label: "Entities",
+                icon: <Globe className="w-8 h-8" />,
+              },
+              {
+                number: "10k+",
+                label: "Coffee cups",
+                icon: <Coffee className="w-8 h-8" />,
+              },
+            ].map((stat, index) => (
+              <div key={index} className="group">
+                <div className="bg-white/10 backdrop-blur-xl p-8 rounded-3xl border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
+                  <div className="text-white mb-4 flex justify-center">
+                    {stat.icon}
+                  </div>
+                  <div className="text-6xl font-bold mb-4 text-white">
+                    {stat.number}
+                  </div>
+                  <div className="text-blue-100 text-xl">{stat.label}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-32 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <h2 className="text-5xl font-bold text-center mb-20 text-gray-900">
+            Our Clients Are Satisfied Clients
+          </h2>
+          <div className="grid lg:grid-cols-2 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div
+                key={index}
+                className="bg-white p-8 rounded-3xl border border-gray-200 hover:border-gray-300 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 group"
+              >
+                <div className="flex mb-6">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="w-5 h-5 text-yellow-400 fill-current"
+                    />
+                  ))}
+                </div>
+                <p className="text-gray-700 mb-8 text-lg italic leading-relaxed">
+                  "{testimonial.quote}"
+                </p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center text-white font-bold mr-4">
+                    {testimonial.avatar}
+                  </div>
+                  <div>
+                    <div className="font-semibold text-gray-900 text-lg">
+                      {testimonial.name}
+                    </div>
+                    <div className="text-gray-600">{testimonial.title}</div>
+                    <div className="text-blue-600 text-sm hover:text-blue-800 transition-colors">
+                      {testimonial.website}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section id="team" className="py-32">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-5xl font-bold mb-6 text-gray-900">
+            OUR ADMINISTRATORS
+          </h2>
+          <p className="text-2xl text-gray-600 mb-20">
+            Analytical minds who really know what they are doing
+          </p>
+          <div className="max-w-2xl mx-auto">
+            <div className="bg-white rounded-3xl p-12 border border-gray-200 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+              <div className="w-40 h-40 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-8 flex items-center justify-center text-white text-4xl font-bold">
+                AJ
+              </div>
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                Andy Jenk
+              </h3>
+              <p className="text-xl text-blue-600 mb-6">Chief Client Officer</p>
+              <p className="text-gray-700 text-lg leading-relaxed">
+                From the start of my career, I've been driven by a commitment to
+                helping clients succeed with their projects. My expertise lies
+                in two key areas: building effective corporate structures and
+                developing impactful sales strategies.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-32 relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600"></div>
+        <div className="container mx-auto px-6 text-center relative z-10">
+          <h2 className="text-5xl font-bold mb-8 text-white">
+            Define goals and plan the path to success:
+          </h2>
+          <p className="text-2xl mb-12 text-purple-100">
+            We look forward to hearing from you!
+          </p>
+          <button className="bg-white text-purple-600 px-12 py-6 rounded-full text-xl font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+            Contact Us Now
+          </button>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-16">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div>
+              <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
+                tokaz
+              </div>
+              <p className="text-gray-400 leading-relaxed">
+                Professional corporate solutions tailored for your success.
+              </p>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Services</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li>Bank Account Opening</li>
+                <li>Company Formation</li>
+                <li>Tax Optimization</li>
+                <li>Accounting Services</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Company</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li>About Us</li>
+                <li>Our Team</li>
+                <li>Testimonials</li>
+                <li>Contact</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Contact</h4>
+              <div className="space-y-2 text-gray-400">
+                <div className="flex items-center">
+                  <Mail className="w-4 h-4 mr-2" />
+                  info@tokaz.com
+                </div>
+                <div className="flex items-center">
+                  <Phone className="w-4 h-4 mr-2" />
+                  +41 123 456 789
+                </div>
+                <div className="flex items-center">
+                  <MapPin className="w-4 h-4 mr-2" />
+                  Zurich, Switzerland
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+            <p>&copy; 2025 tokaz. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+          @keyframes gradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+          }
+          .animate-gradient {
+            background-size: 200% 200%;
+            animation: gradient 3s ease infinite;
+          }
+          .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out;
+          }
+          @keyframes fadeInUp {
+            from {
+              opacity: 0;
+              transform: translateY(30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+        `,
+        }}
+      />
+    </div>
+  );
+}

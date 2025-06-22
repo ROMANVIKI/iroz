@@ -1,27 +1,57 @@
 "use client";
 import Link from "next/link";
 import { Menu, X, ArrowDown, ArrowUp } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import LogoImg from "../public/assets/images/tokaz-logo.png";
 import Image from "next/image";
-import Logo from "../public/assets/images/tokaz-logo.png";
 
 const Navbar = () => {
+  const mobileMenuRef = useRef(null);
+  const iconProps = { size: 30, color: "black" };
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isMobileSubmenuOpen, setIsMobileSubmenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsNavOpen(false);
+    };
+
+    const handleClickOutside = (event) => {
+      if (
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target)
+      ) {
+        setIsNavOpen(false);
+      }
+    };
+
+    if (isNavOpen) {
+      window.addEventListener("scroll", handleScroll);
+      document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener("touchstart", handleClickOutside);
+    }
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
+  }, [isNavOpen]);
+
   const subMenuLink = [
     { name: "Strategy", link: "/our-services/strategy" },
     { name: "Marketing & Branding", link: "/our-services/marketing-branding" },
     { name: "Corporate Services", link: "/our-services/corporate-services" },
   ];
 
-  const iconProps = { size: 30, color: "black" };
-  const [isNavOpen, setIsNavOpen] = useState(false);
-  const [isMobileSubmenuOpen, setIsMobileSubmenuOpen] = useState(false);
-
   return (
     <>
       {/* Fixed Top Navbar */}
-      <nav className="border z-50 border-gray-200 border-d-none border-l-none border-r-none  w-full backdrop-blur-md bg-white/70 shadow-md ">
+      <nav className="border z-50 border-gray-200 border-d-none border-l-none border-r-none w-full  backdrop-blur-md bg-white/70 shadow-md ">
         <div className="flex justify-between items-center max-w-6xl mx-auto">
-          <Image alt="tokaz logo" src={Logo} width={80} />
+          <h1 className="text-3xl text-gray-700 font-bold">
+            <Image src={LogoImg} width={90} alt="tokaz logo" />
+          </h1>
 
           <div
             onClick={() => setIsNavOpen(!isNavOpen)}
@@ -45,10 +75,10 @@ const Navbar = () => {
             </li>
 
             <li className="group relative cursor-pointer">
-              <p>
+              <Link href="/our-services" className="relative flex items-center">
                 Our Services
                 <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-black group-hover:w-full transition-all duration-300 origin-right"></span>
-              </p>
+              </Link>
 
               {/* Desktop submenu */}
               <ul
@@ -74,13 +104,14 @@ const Navbar = () => {
 
       {/* Mobile Dropdown */}
       <div
-        className={`fixed w-1/2  top-16 right-0 h-screen bg-white/90 backdrop-blur-lg shadow-xl rounded-md px-6 py-4 transition-all duration-300 ease-in-out  ${
+        ref={mobileMenuRef}
+        className={`fixed w-1/2 top-12 right-0  bg-white/90 backdrop-blur-lg shadow-xl rounded-md px-6 py-4 transition-all duration-300 ease-in-out z-40 ${
           isNavOpen
             ? "opacity-100 scale-100"
             : "opacity-0 scale-95 pointer-events-none"
         } md:hidden`}
       >
-        <ul className="space-y-4 z-50">
+        <ul className="space-y-4">
           <li>
             <Link
               href="/our-team"
