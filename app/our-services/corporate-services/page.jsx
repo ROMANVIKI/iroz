@@ -54,40 +54,40 @@ export default function LightThemePage() {
     },
   ];
 
-  const testimonials = [
-    {
-      name: "Oliver Haas",
-      title: "School Principal - LernCenter",
-      quote:
-        "My website now works the way I imagined it would. Traffic and leads have doubled. Thanks to tokaz and the team's expertise, I now feel that I'm in good hands.",
-      website: "www.lerncenter.ch",
-      avatar: "OH",
-    },
-    {
-      name: "Alexander Radulow",
-      title: "Architect - lowal",
-      quote:
-        "Thank you tokaz. The simple design draws attention to the important things. Exactly what I was looking for.",
-      website: "www.lowal.ch",
-      avatar: "AR",
-    },
-    {
-      name: "Fabrizio Fuchs",
-      title: "Board member - Academic Gateway",
-      quote:
-        "It's impressive how quickly our website went from zero to 100%. Thanks to the incredible work of this motivated team, we will achieve our sales targets for this year!",
-      website: "www.academic-gateway.ch",
-      avatar: "FF",
-    },
-    {
-      name: "Serkan Dogan",
-      title: "Entrepreneur - VIZ",
-      quote:
-        "I have trusted in the skills of Dimitar and his team for 14 years. I have always been able to rely on receiving great performance with every service for my companies.",
-      website: "www.viz.ch",
-      avatar: "SD",
-    },
-  ];
+  // const testimonials = [
+  //   {
+  //     name: "Oliver Haas",
+  //     title: "School Principal - LernCenter",
+  //     quote:
+  //       "My website now works the way I imagined it would. Traffic and leads have doubled. Thanks to tokaz and the team's expertise, I now feel that I'm in good hands.",
+  //     website: "www.lerncenter.ch",
+  //     avatar: "OH",
+  //   },
+  //   {
+  //     name: "Alexander Radulow",
+  //     title: "Architect - lowal",
+  //     quote:
+  //       "Thank you tokaz. The simple design draws attention to the important things. Exactly what I was looking for.",
+  //     website: "www.lowal.ch",
+  //     avatar: "AR",
+  //   },
+  //   {
+  //     name: "Fabrizio Fuchs",
+  //     title: "Board member - Academic Gateway",
+  //     quote:
+  //       "It's impressive how quickly our website went from zero to 100%. Thanks to the incredible work of this motivated team, we will achieve our sales targets for this year!",
+  //     website: "www.academic-gateway.ch",
+  //     avatar: "FF",
+  //   },
+  //   {
+  //     name: "Serkan Dogan",
+  //     title: "Entrepreneur - VIZ",
+  //     quote:
+  //       "I have trusted in the skills of Dimitar and his team for 14 years. I have always been able to rely on receiving great performance with every service for my companies.",
+  //     website: "www.viz.ch",
+  //     avatar: "SD",
+  //   },
+  // ];
 
   return (
     <div className="min-h-screen bg-white text-gray-900 overflow-x-hidden">
@@ -102,10 +102,10 @@ export default function LightThemePage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative  flex items-center justify-center pt-4">
+      <section className="relative min-h-screen flex items-center justify-center ">
         <div className="container mx-auto px-6 text-center relative z-10">
           <div className="animate-fade-in-up">
-            <h1 className="text-3xl md:text-8xl font-bold mb-8 leading-tight text-gray-900">
+            <h1 className="text-5xl md:text-8xl font-bold mb-8 leading-tight text-gray-900">
               Tailored
               <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent animate-gradient">
                 Corporate Solutions
