@@ -77,7 +77,7 @@ const HeroSection = () => {
                   </div>
                   <div className="text-center border-x border-gray-200">
                     <div className="text-2xl font-bold text-purple-600">
-                      50+
+                      35+
                     </div>
                     <div className="text-xs text-gray-500 uppercase tracking-wide">
                       Projects Led

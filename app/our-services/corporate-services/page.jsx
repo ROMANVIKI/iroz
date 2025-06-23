@@ -19,6 +19,9 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import CEOImage from "../../../public/assets/images/ceo.jpeg";
+import Image from "next/image";
+import ModernContactSection from "@/components/Strategy/ModernContactSection";
 
 export default function LightThemePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -302,17 +305,17 @@ export default function LightThemePage() {
           <div className="grid md:grid-cols-3 gap-12 text-center">
             {[
               {
-                number: "500+",
+                number: "35+",
                 label: "Projects",
                 icon: <Zap className="w-8 h-8" />,
               },
               {
-                number: "1000+",
+                number: "50+",
                 label: "Entities",
                 icon: <Globe className="w-8 h-8" />,
               },
               {
-                number: "10k+",
+                number: "200+",
                 label: "Coffee cups",
                 icon: <Coffee className="w-8 h-8" />,
               },
@@ -346,9 +349,7 @@ export default function LightThemePage() {
           </p>
           <div className="max-w-2xl mx-auto">
             <div className="bg-white rounded-3xl p-12 border border-gray-200 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-              <div className="w-40 h-40 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-8 flex items-center justify-center text-white text-4xl font-bold">
-                AJ
-              </div>
+              <Image src={CEOImage} alt="founder's picture" />
               <h3 className="text-3xl font-bold text-gray-900 mb-4">
                 RAGUNATHAN
               </h3>
@@ -365,20 +366,7 @@ export default function LightThemePage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-32 relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600"></div>
-        <div className="container mx-auto px-6 text-center relative z-10">
-          <h2 className="text-5xl font-bold mb-8 text-white">
-            Define goals and plan the path to success:
-          </h2>
-          <p className="text-2xl mb-12 text-purple-100">
-            We look forward to hearing from you!
-          </p>
-          <button className="bg-white text-purple-600 px-12 py-6 rounded-full text-xl font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
-            Contact Us Now
-          </button>
-        </div>
-      </section>
+      <ModernContactSection />
 
       {/* Footer */}
       <Footer />
