@@ -17,6 +17,8 @@ import {
   Shield,
   Globe,
 } from "lucide-react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function LightThemePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -97,66 +99,23 @@ export default function LightThemePage() {
       </div>
 
       {/* Header */}
-      <header className="relative z-50">
-        <nav className="bg-white/95 backdrop-blur-md border-b border-gray-200 fixed w-full top-0">
-          <div className="container mx-auto px-6 py-4">
-            <div className="flex items-center justify-between">
-              <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                tokaz
-              </div>
-              <div className="hidden md:flex space-x-8">
-                <a
-                  href="#services"
-                  className="text-gray-700 hover:text-blue-600 transition-colors"
-                >
-                  Services
-                </a>
-                <a
-                  href="#team"
-                  className="text-gray-700 hover:text-blue-600 transition-colors"
-                >
-                  Team
-                </a>
-                <a
-                  href="#contact"
-                  className="text-gray-700 hover:text-blue-600 transition-colors"
-                >
-                  Contact
-                </a>
-              </div>
-              <button
-                className="md:hidden"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-              >
-                {isMenuOpen ? (
-                  <X className="w-6 h-6" />
-                ) : (
-                  <Menu className="w-6 h-6" />
-                )}
-              </button>
-            </div>
-          </div>
-        </nav>
-      </header>
+      <Navbar />
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center pt-4">
         <div className="container mx-auto px-6 text-center relative z-10">
           <div className="animate-fade-in-up">
-            <h1 className="text-4xl md:text-8xl font-bold mb-8 leading-tight text-gray-900">
+            <h1 className="text-3xl md:text-8xl font-bold mb-8 leading-tight text-gray-900">
               Tailored
               <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent animate-gradient">
                 Corporate Solutions
               </span>
+              <span>for You Business Needs</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
               Ensuring That Your Business Works - Our main goal is your success
               through comprehensive corporate services
             </p>
-            <button className="group bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-6 rounded-full text-md font-semibold hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105">
-              Get Started Today
-              <ArrowRight className="inline-block ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
-            </button>
           </div>
         </div>
 
@@ -164,7 +123,7 @@ export default function LightThemePage() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-32 relative bg-gray-50">
+      <section id="services" className="py-18 relative bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
@@ -177,16 +136,16 @@ export default function LightThemePage() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group relative bg-white p-8 rounded-3xl border border-gray-200 hover:border-gray-300 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 overflow-hidden"
+                className="group relative mx-auto text-center bg-white p-8 rounded-3xl border border-gray-200 hover:border-gray-300 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 overflow-hidden"
               >
                 {/* Gradient overlay */}
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-3xl`}
                 ></div>
 
-                <div className="relative z-10">
+                <div className="relative z-10 text-center">
                   <div
-                    className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${service.gradient} mb-6 text-white`}
+                    className={`inline-flex p-4 mx-auto rounded-2xl bg-gradient-to-br ${service.gradient} mb-6 text-white`}
                   >
                     {service.icon}
                   </div>
@@ -196,9 +155,6 @@ export default function LightThemePage() {
                   <p className="text-gray-600 mb-6 leading-relaxed">
                     {service.description}
                   </p>
-                  <button className="text-blue-600 font-semibold hover:text-blue-800 flex items-center group-hover:translate-x-2 transition-all duration-300">
-                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                  </button>
                 </div>
               </div>
             ))}
@@ -435,7 +391,7 @@ export default function LightThemePage() {
                 AJ
               </div>
               <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                Andy Jenk
+                RAGUNATHAN
               </h3>
               <p className="text-xl text-blue-600 mb-6">Chief Client Officer</p>
               <p className="text-gray-700 text-lg leading-relaxed">
@@ -466,58 +422,7 @@ export default function LightThemePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-16">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
-                tokaz
-              </div>
-              <p className="text-gray-400 leading-relaxed">
-                Professional corporate solutions tailored for your success.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Services</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>Bank Account Opening</li>
-                <li>Company Formation</li>
-                <li>Tax Optimization</li>
-                <li>Accounting Services</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>About Us</li>
-                <li>Our Team</li>
-                <li>Testimonials</li>
-                <li>Contact</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Contact</h4>
-              <div className="space-y-2 text-gray-400">
-                <div className="flex items-center">
-                  <Mail className="w-4 h-4 mr-2" />
-                  info@tokaz.com
-                </div>
-                <div className="flex items-center">
-                  <Phone className="w-4 h-4 mr-2" />
-                  +41 123 456 789
-                </div>
-                <div className="flex items-center">
-                  <MapPin className="w-4 h-4 mr-2" />
-                  Zurich, Switzerland
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 tokaz. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
 
       <style
         dangerouslySetInnerHTML={{

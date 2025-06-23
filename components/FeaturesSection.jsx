@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const features = [
   {
-    title: "Strategy",
+    title: "Strategic Business Advisory",
     description:
       "Increase your success by supporting the development and implementation of your global strategy.",
     img: "/assets/images/img1.png",

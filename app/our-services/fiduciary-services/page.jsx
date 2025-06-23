@@ -155,9 +155,6 @@ export default function page() {
                 Book a Call Today
                 <ArrowRight className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="text-slate-700 px-8 py-4 rounded-full text-lg font-medium hover:bg-white/50 transition-all duration-300 backdrop-blur-sm">
-                Learn More
-              </button>
             </div>
           </div>
         </div>
@@ -179,16 +176,36 @@ export default function page() {
               At tokaz, we specialize in delivering top-notch corporate services
               tailored to your business needs. From offering directorship roles
               to managing corporate compliance, our experienced team is here to
-              support you.
+              support you. Let us help you navigate complex corporate landscapes
+              and drive your success.
             </p>
           </div>
 
+          {/* <div className="grid lg:grid-cols-3 gap-8"> */}
+          {/*   {services.map((service, index) => ( */}
+          {/*     <div key={index} className="group relative"> */}
+          {/*       <div className="bg-white/70 backdrop-blur-xl p-8 rounded-3xl shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"> */}
+          {/*         <div */}
+          {/*           className={`w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`} */}
+          {/*         > */}
+          {/*           {service.icon} */}
+          {/*         </div> */}
+          {/*         <h3 className="text-2xl font-bold text-slate-900 mb-4"> */}
+          {/*           {service.title} */}
+          {/*         </h3> */}
+          {/*         <p className="text-slate-600 mb-6 leading-relaxed"> */}
+          {/*           {service.description} */}
+          {/*         </p> */}
+          {/*       </div> */}
+          {/*     </div> */}
+          {/*   ))} */}
+          {/* </div> */}
           <div className="grid lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className="group relative">
-                <div className="bg-white/70 backdrop-blur-xl p-8 rounded-3xl shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                <div className="bg-white/70 backdrop-blur-xl p-8 rounded-3xl shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 text-center">
                   <div
-                    className={`w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                    className={`w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 mx-auto`}
                   >
                     {service.icon}
                   </div>
@@ -198,9 +215,6 @@ export default function page() {
                   <p className="text-slate-600 mb-6 leading-relaxed">
                     {service.description}
                   </p>
-                  <button className="text-purple-600 font-semibold hover:text-purple-700 flex items-center group-hover:translate-x-2 transition-transform duration-300">
-                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                  </button>
                 </div>
               </div>
             ))}
@@ -231,9 +245,9 @@ export default function page() {
             {whyChooseUs.map((item, index) => (
               <div
                 key={index}
-                className="bg-white/70 backdrop-blur-xl p-6 rounded-2xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
+                className="bg-white/70 text-center backdrop-blur-xl p-6 rounded-2xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
               >
-                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-4 shadow-md group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 mx-auto h-12 bg-white rounded-xl flex items-center justify-center mb-4 shadow-md group-hover:scale-110 transition-transform duration-300">
                   {item.icon}
                 </div>
                 <h4 className="text-lg font-bold text-slate-900 mb-3">
@@ -347,40 +361,40 @@ export default function page() {
       </section>
 
       {/* Success Stories */}
-      <section className="py-20 px-6">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-white/80 backdrop-blur-sm rounded-full px-6 py-2 mb-6 shadow-lg border border-white/20">
-              <span className="text-sm font-medium text-slate-600">
-                🏆 Success Stories
-              </span>
-            </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-              Client Success Stories
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((item, index) => (
-              <div
-                key={index}
-                className="bg-white/70 backdrop-blur-xl p-8 rounded-3xl shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group"
-              >
-                <div className="h-32 bg-gradient-to-r from-purple-200 to-blue-200 rounded-2xl mb-6 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                  <TrendingUp className="w-12 h-12 text-purple-600" />
-                </div>
-                <h4 className="text-xl font-bold text-slate-900 mb-3">
-                  Client Success Story
-                </h4>
-                <p className="text-slate-600 leading-relaxed">
-                  Transformative results achieved through our comprehensive
-                  fiduciary services and strategic partnership approach.
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* <section className="py-20 px-6"> */}
+      {/*   <div className="container mx-auto"> */}
+      {/*     <div className="text-center mb-16"> */}
+      {/*       <div className="inline-flex items-center bg-white/80 backdrop-blur-sm rounded-full px-6 py-2 mb-6 shadow-lg border border-white/20"> */}
+      {/*         <span className="text-sm font-medium text-slate-600"> */}
+      {/*           🏆 Success Stories */}
+      {/*         </span> */}
+      {/*       </div> */}
+      {/*       <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6"> */}
+      {/*         Client Success Stories */}
+      {/*       </h2> */}
+      {/*     </div> */}
+      {/**/}
+      {/*     <div className="grid md:grid-cols-3 gap-8"> */}
+      {/*       {[1, 2, 3].map((item, index) => ( */}
+      {/*         <div */}
+      {/*           key={index} */}
+      {/*           className="bg-white/70 backdrop-blur-xl p-8 rounded-3xl shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group" */}
+      {/*         > */}
+      {/*           <div className="h-32 bg-gradient-to-r from-purple-200 to-blue-200 rounded-2xl mb-6 flex items-center justify-center group-hover:scale-105 transition-transform duration-300"> */}
+      {/*             <TrendingUp className="w-12 h-12 text-purple-600" /> */}
+      {/*           </div> */}
+      {/*           <h4 className="text-xl font-bold text-slate-900 mb-3"> */}
+      {/*             Client Success Story */}
+      {/*           </h4> */}
+      {/*           <p className="text-slate-600 leading-relaxed"> */}
+      {/*             Transformative results achieved through our comprehensive */}
+      {/*             fiduciary services and strategic partnership approach. */}
+      {/*           </p> */}
+      {/*         </div> */}
+      {/*       ))} */}
+      {/*     </div> */}
+      {/*   </div> */}
+      {/* </section> */}
 
       {/* Final CTA */}
       <section className="py-20 px-6 relative overflow-hidden">

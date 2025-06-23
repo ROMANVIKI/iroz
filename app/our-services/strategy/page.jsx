@@ -12,6 +12,10 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ServicesProcess from "@/components/ServicesProcess";
+import CEOImage from "../../../public/assets/images/ceo.jpeg";
+import Image from "next/image";
+import ModernContactSection from "@/components/Strategy/ModernContactSection";
 
 export default function page() {
   return (
@@ -112,13 +116,13 @@ export default function page() {
             <div className="grid md:grid-cols-3 gap-8 text-center">
               <div>
                 <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
-                  100+
+                  35+
                 </div>
                 <div className="text-gray-600 text-lg">Projects</div>
               </div>
               <div>
                 <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
-                  10+
+                  3+
                 </div>
                 <div className="text-gray-600 text-lg">Years</div>
               </div>
@@ -131,6 +135,7 @@ export default function page() {
             </div>
           </div>
         </section>
+        <ServicesProcess />
 
         {/* Team Section */}
         <section id="team" className="py-16 bg-white">
@@ -146,10 +151,8 @@ export default function page() {
 
             <div className="max-w-2xl mx-auto">
               <div className="bg-gray-50 rounded-lg p-8 text-center">
-                <div className="w-24 h-24 bg-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-white text-2xl font-bold">DJ</span>
-                </div>
-                <h3 className="text-2xl font-bold mb-2">Dimitar Jauch</h3>
+                <Image src={CEOImage} alt="founder's image" />
+                <h3 className="text-2xl font-bold mb-2">RAGUNATHAN</h3>
                 <p className="text-blue-600 font-semibold mb-4">CEO</p>
                 <p className="text-gray-600 italic">
                   "Being an entrepreneur is not easy. It's good to be able to
@@ -161,47 +164,41 @@ export default function page() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Did we appeal to you?
-            </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              We would be happy to discuss your concerns with you and work out
-              your next strategy together.
-            </p>
-            <p className="text-lg mb-6">
-              Define goals and plan the path to success:
-            </p>
-            <a
-              href="#contact"
-              className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
-            >
-              We look forward to hearing from you!
-            </a>
-          </div>
-        </section>
+        <ModernContactSection />
+        {/* <section className="py-16 bg-white "> */}
+        {/*   <div className="container mx-auto px-4 text-sm "> */}
+        {/*     <p className="text-xl mb-8 max-w-2xl mx-auto"> */}
+        {/*       Define goals and plan the path to{" "} */}
+        {/*       <span className="text-blue-600">success:</span> */}
+        {/*     </p> */}
+        {/*     <p className="text-lg mb-6">We look forward to hearing from you!</p> */}
+        {/*     <div> */}
+        {/*       <PhoneCall /> */}
+        {/*       <Mail /> */}
+        {/*     </div> */}
+        {/*   </div> */}
+        {/* </section> */}
 
         {/* Success Stories */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Success Stories
-            </h2>
-            <p className="text-xl text-gray-600 mb-8">
-              Succeeding Together: Your Goals, Our Mission
-            </p>
-            <div className="bg-white rounded-lg p-8 max-w-md mx-auto shadow-lg">
-              <h3 className="text-2xl font-bold text-blue-600 mb-4">
-                Our Clients Are Satisfied
-              </h3>
-              <p className="text-gray-600">
-                We've helped numerous companies achieve their strategic goals
-                and sustainable growth.
-              </p>
-            </div>
-          </div>
-        </section>
+        {/* <section className="py-16 bg-gray-50"> */}
+        {/*   <div className="container mx-auto px-4 text-center"> */}
+        {/*     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"> */}
+        {/*       Success Stories */}
+        {/*     </h2> */}
+        {/*     <p className="text-xl text-gray-600 mb-8"> */}
+        {/*       Succeeding Together: Your Goals, Our Mission */}
+        {/*     </p> */}
+        {/*     <div className="bg-white rounded-lg p-8 max-w-md mx-auto shadow-lg"> */}
+        {/*       <h3 className="text-2xl font-bold text-blue-600 mb-4"> */}
+        {/*         Our Clients Are Satisfied */}
+        {/*       </h3> */}
+        {/*       <p className="text-gray-600"> */}
+        {/*         We've helped numerous companies achieve their strategic goals */}
+        {/*         and sustainable growth. */}
+        {/*       </p> */}
+        {/*     </div> */}
+        {/*   </div> */}
+        {/* </section> */}
 
         <Footer />
       </div>

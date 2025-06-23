@@ -40,7 +40,7 @@ const Navbar = () => {
 
   const subMenuLink = [
     { name: "Strategy", link: "/our-services/strategy" },
-    { name: "Marketing & Branding", link: "/our-services/marketing-branding" },
+    { name: "Fiduciary Services", link: "/our-services/fiduciary-services" },
     { name: "Corporate Services", link: "/our-services/corporate-services" },
   ];
 

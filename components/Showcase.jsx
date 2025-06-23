@@ -60,6 +60,20 @@ const Showcase = () => {
         <div className="absolute top-10 left-10 w-32 h-32 bg-blue-200/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-10 right-10 w-40 h-40 bg-purple-300/10 rounded-full blur-2xl"></div>
       </div>
+      <div>
+        <p className="text-center text-gray-600">Your Partners</p>
+        <h1
+          ref={(el) => (elementsRef.current[1] = el)}
+          className="text-3xl lg:text-5xl font-bold text-center mb-8 bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent leading-tight"
+        >
+          The driving force behind
+          <br />
+          <span className="relative from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent leading-tight">
+            TOKAZ
+            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+          </span>
+        </h1>
+      </div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div
