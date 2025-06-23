@@ -23,6 +23,8 @@ import {
 } from "lucide-react";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import Image from "next/image";
+import CEOImage from "../../../public/assets/images/ceo.jpeg";
 
 export default function page() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -86,19 +88,21 @@ export default function page() {
   ];
 
   const teamMembers = [
+    // {
+    //   name: "VIKRAM",
+    //   title: "Chief Client Officer",
+    //   description:
+    //     "Driven by commitment to client success, specializing in corporate structures and impactful sales strategies.",
+    //   gradient: "from-violet-600 to-purple-600",
+    //   pic: CEOImage,
+    // },
     {
-      name: "Andy Jenk",
-      title: "Chief Client Officer",
-      description:
-        "Driven by commitment to client success, specializing in corporate structures and impactful sales strategies.",
-      gradient: "from-violet-600 to-purple-600",
-    },
-    {
-      name: "Dimitar Jauch",
+      name: "RAGUNATHAN",
       title: "CEO",
       description:
         "Understanding entrepreneurship isn't easy. It's valuable to connect with someone who truly gets it.",
       gradient: "from-blue-600 to-indigo-600",
+      pic: CEOImage,
     },
   ];
 
@@ -308,9 +312,11 @@ export default function page() {
                 className="bg-white/70 backdrop-blur-xl p-8 rounded-3xl shadow-xl border border-white/20 text-center hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group"
               >
                 <div
-                  className={`w-32 h-32 bg-gradient-to-r ${member.gradient} rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-105 transition-transform duration-300`}
+                  className={`w-32 h-32 bg-gradient-to-r  rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-105 transition-transform duration-300`}
                 >
-                  <Users className="w-16 h-16 text-white" />
+                  <Image src={member.pic} />
+
+                  {/* <Users className="w-16 h-16 text-white" /> */}
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-2">
                   {member.name}
@@ -334,7 +340,7 @@ export default function page() {
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div className="group">
               <div className="text-5xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300">
-                500
+                50
               </div>
               <div className="text-purple-300 font-medium">
                 Financial Statements
@@ -342,7 +348,7 @@ export default function page() {
             </div>
             <div className="group">
               <div className="text-5xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300">
-                0.6M
+                0.6K
               </div>
               <div className="text-blue-300 font-medium">
                 Accounting Records
@@ -350,7 +356,7 @@ export default function page() {
             </div>
             <div className="group">
               <div className="text-5xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300">
-                3
+                2
               </div>
               <div className="text-cyan-300 font-medium">
                 Coffee Machines in Use

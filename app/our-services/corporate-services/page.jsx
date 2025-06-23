@@ -102,7 +102,7 @@ export default function LightThemePage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center pt-4">
+      <section className="relative  flex items-center justify-center pt-4">
         <div className="container mx-auto px-6 text-center relative z-10">
           <div className="animate-fade-in-up">
             <h1 className="text-3xl md:text-8xl font-bold mb-8 leading-tight text-gray-900">
@@ -334,55 +334,14 @@ export default function LightThemePage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-32 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <h2 className="text-5xl font-bold text-center mb-20 text-gray-900">
-            Our Clients Are Satisfied Clients
-          </h2>
-          <div className="grid lg:grid-cols-2 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="bg-white p-8 rounded-3xl border border-gray-200 hover:border-gray-300 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 group"
-              >
-                <div className="flex mb-6">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-5 h-5 text-yellow-400 fill-current"
-                    />
-                  ))}
-                </div>
-                <p className="text-gray-700 mb-8 text-lg italic leading-relaxed">
-                  "{testimonial.quote}"
-                </p>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center text-white font-bold mr-4">
-                    {testimonial.avatar}
-                  </div>
-                  <div>
-                    <div className="font-semibold text-gray-900 text-lg">
-                      {testimonial.name}
-                    </div>
-                    <div className="text-gray-600">{testimonial.title}</div>
-                    <div className="text-blue-600 text-sm hover:text-blue-800 transition-colors">
-                      {testimonial.website}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Team Section */}
       <section id="team" className="py-32">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-5xl font-bold mb-6 text-gray-900">
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">
             OUR ADMINISTRATORS
           </h2>
-          <p className="text-2xl text-gray-600 mb-20">
+          <p className="text-xl text-gray-600 mb-20">
             Analytical minds who really know what they are doing
           </p>
           <div className="max-w-2xl mx-auto">
